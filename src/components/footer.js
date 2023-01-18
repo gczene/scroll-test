@@ -22,11 +22,11 @@ export default function Footer() {
       window.addEventListener('touchmove', preventDefault, wheelOpt);
       var body = document.getElementsByTagName('body');
       body[0].style.overflow = 'hidden';
-      window?.scrollTo && window.scrollTo({ top: 0, behavior: 'smooth' });
-
       window.addEventListener('touchend', () => {
         window?.scrollTo && window.scrollTo({ top: 0, behavior: 'smooth' });
       }, wheelOpt)
+      window?.scrollTo && window.scrollTo({ top: 0, behavior: 'smooth' });
+
 
     }, 3000);
     return function () {
