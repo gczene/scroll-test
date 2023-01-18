@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useEffect} from "react";
 
 function preventDefault(e) {
@@ -12,7 +13,7 @@ export default function Footer() {
   let supportsPassive = false;
   try {
     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-      get: function () { supportsPassive = true; }
+      get: function () { supportsPassive = true; return;}
     }));
   } catch(e) {};
   const  wheelOpt = supportsPassive ? { passive: false } : false;
